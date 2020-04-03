@@ -1,0 +1,15 @@
+# Env
+name: !ENV [TEST_NAME]
+age: !ENV [TEST_AGE, 20]
+status: !ENV [TEST_STATUS, 0]
+is_customer: !ENV [TEST_IS_CUSTOMER, false]
+is_admin: !ENV [TEST_IS_ADMIN, false]
+
+# Loader
+data: !LOADER [mocks/data.json]
+env: !LOADER [mocks/data.json, "env"]
+id: !LOADER [mocks/data.json, "id"]
+
+# Realpath
+code_dir: !REALPATH /home/test/src
+mocks_dir: !REALPATH mocks/data.json
